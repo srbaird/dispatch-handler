@@ -29,3 +29,27 @@ DispatchHandler<String> = new DispatchHandler<String>();
 ```
 
 If an incorrect object type is return from the Visitor then a `ClassCastException` will be thrown.
+
+___
+
+Methods in the Visitor implementation may be added as required. Test examples are available in the test directory.
+
+```
+class VisitorImpl implements Visitor {
+
+	public void dispatch(SomeClass o) {
+	...
+	}
+	
+	public void dispatch(SomeOtherClass o) {
+	...
+	}
+	
+	public Object handle(SomeClass o) {
+	...
+	return something;
+	}
+
+}
+
+```
