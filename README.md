@@ -1,6 +1,6 @@
 ### Dispatch handler
 
-######A simplification of the Visitor pattern for Java.
+####A simplification of the Visitor pattern for Java.
 
 A common way of implementing the Visitor pattern in Java is with a double dispatch by implementing an interface that accepts a Visitor on the element to be extended. The element  then invokes a method on the Visitor passing itself as an argument which is directed to the appropriate overloaded method. This has two main drawbacks:
 
