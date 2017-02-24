@@ -4,8 +4,8 @@
 
 A common way of implementing the Visitor pattern in Java is with a double dispatch by implementing an interface that accepts a Visitor on the element to be extended. The element  then invokes a method on the Visitor passing itself as an argument which is directed to the appropriate overloaded method. This has two main drawbacks:
 
-1.The elements in the structure may be third party software (e.g. an implementation of the DOM model) and so will not have an interface that accepts a Visitor
-2.If the elements are third party and do implement an appropriate interface then they will need to be recompiled if the Visitor interface changes as Java links statically to overloaded methods.
+* The elements in the structure may be third party software (e.g. an implementation of the DOM model) and so will not have an interface that accepts a Visitor
+* If the elements are third party and do implement an appropriate interface then they will need to be recompiled if the Visitor interface changes as Java links statically to overloaded methods.
 
 These can be overcome by employing the dispatch-handler. When traversing the element structure calls to the Visitor automatically invoke the most appropriate method without any need to impose an interface on the element class. Neither does the Visitor interface need extending, just the implementing concrete Visitor instance to which overloaded visit() methods may be added.
 
