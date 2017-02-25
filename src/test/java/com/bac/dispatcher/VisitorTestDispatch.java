@@ -176,7 +176,7 @@ public class VisitorTestDispatch extends AbstractVisitorTest {
 	 * verify().someMethod() determine the someMethod()'s signature.
 	 * 
 	 */
-	class DispatchVisitor implements Visitor {
+	class DispatchVisitor implements Visitor<Object> {
 
 		private final MockDestination mock;
 

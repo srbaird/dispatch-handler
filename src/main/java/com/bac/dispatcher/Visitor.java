@@ -32,13 +32,15 @@
 package com.bac.dispatcher;
 
 /**
- * Specifies methods allowing a class to extend existing object structures in
+ * * Specifies methods allowing a class to extend existing object structures in
  * the manner of the Visitor pattern.
  * 
- * @author Simon Baird
+ * @author simon
  *
+ * @param <T>
+ *            the return type specified for the handle method
  */
-public interface Visitor {
+public interface Visitor<T> {
 
 	/**
 	 * Forwards the supplied object to the appropriate visitor. This is
@@ -61,7 +63,7 @@ public interface Visitor {
 	 *            any {@code Object} that requires extension
 	 * @return null
 	 */
-	default Object handle(Object o) {
+	default T handle(Object o) {
 
 		return null;
 	}

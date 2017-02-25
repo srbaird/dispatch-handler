@@ -197,7 +197,7 @@ public class VisitorTestHandlerWithReturnType extends AbstractVisitorTest {
 	 * verify().someMethod() determine the someMethod()'s signature.
 	 * 
 	 */
-	class HandlerVisitor implements Visitor {
+	class HandlerVisitor implements Visitor<Long> {
 
 		private final MockDestination mock;
 
